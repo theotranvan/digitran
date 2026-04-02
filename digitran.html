@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digi'Tran — Votre partenaire digital en Suisse</title>
+<link rel="icon" type="image/png" href="digitran/icon-digitran-Photoroom.png">
+<meta name="description" content="Digi'Tran, agence digitale suisse à Lausanne. Sites web premium, applications web & mobiles, automatisation SaaS. Transformez votre vision en solutions digitales performantes.">
+<meta name="keywords" content="agence digitale suisse, création site web lausanne, développement application, automatisation SaaS, agence web suisse">
+<meta name="author" content="Digi'Tran">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://digitran.ch">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Digi'Tran — Votre partenaire digital en Suisse">
+<meta property="og:description" content="Nous concevons des sites web premium, des applications sur mesure et des systèmes d'automatisation qui propulsent la croissance de votre entreprise.">
+<meta property="og:url" content="https://digitran.ch">
+<meta property="og:site_name" content="Digi'Tran">
+<meta property="og:locale" content="fr_CH">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Digi'Tran — Votre partenaire digital en Suisse">
+<meta name="twitter:description" content="Agence digitale suisse. Sites web, apps, automatisation SaaS.">
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Digi'Tran",
+  "description": "Agence digitale suisse spécialisée en sites web premium, applications web & mobiles, et automatisation SaaS.",
+  "url": "https://digitran.ch",
+  "email": "contact@digitran.ch",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Lausanne",
+    "addressCountry": "CH"
+  },
+  "areaServed": "CH",
+  "serviceType": ["Web Development", "Mobile App Development", "SaaS Automation", "Web Design"]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --navy:#1B2A4A;
+  --navy-deep:#0F1B33;
+  --navy-light:#2A3D66;
+  --cinnabar:#D94427;
+  --cinnabar-hover:#C13A20;
+  --white:#FFFFFF;
+  --off-white:#F7F8FA;
+  --gray-100:#EEF0F4;
+  --gray-200:#D8DCE4;
+  --gray-400:#9BA3B5;
+  --gray-600:#6B7489;
+  --text-dark:#1A1E2C;
+  --font-display:'Playfair Display',Georgia,serif;
+  --font-body:'DM Sans',system-ui,sans-serif;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:var(--font-body);color:var(--text-dark);background:var(--white);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+/* ── NAVIGATION ── */
+nav{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:20px 0;transition:all .4s ease}
+nav.scrolled{background:rgba(27,42,74,.97);backdrop-filter:blur(12px);padding:14px 0;box-shadow:0 2px 30px rgba(0,0,0,.12)}
+nav .container{display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:center;gap:10px}
+.nav-logo img{height:38px}
+.nav-logo span{font-family:var(--font-body);font-weight:700;font-size:1.25rem;color:var(--white);letter-spacing:-.02em}
+.nav-links{display:flex;align-items:center;gap:36px}
+.nav-links a{color:rgba(255,255,255,.8);font-size:.9rem;font-weight:500;transition:color .3s;letter-spacing:.01em}
+.nav-links a:hover{color:var(--white)}
+.nav-cta{background:var(--cinnabar)!important;color:var(--white)!important;padding:10px 24px;border-radius:6px;font-weight:600;font-size:.88rem;transition:all .3s;letter-spacing:.02em}
+.nav-cta:hover{background:var(--cinnabar-hover)!important;transform:translateY(-1px)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.hamburger span{width:24px;height:2px;background:var(--white);transition:all .3s}
+
+/* ── HERO ── */
+.hero{min-height:100vh;background:linear-gradient(165deg,var(--navy-deep) 0%,var(--navy) 40%,var(--navy-light) 100%);display:flex;align-items:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-20%;right:-10%;width:600px;height:600px;background:radial-gradient(circle,rgba(217,68,39,.12) 0%,transparent 70%);border-radius:50%;pointer-events:none}
+.hero::after{content:'';position:absolute;bottom:-30%;left:-15%;width:800px;height:800px;background:radial-gradient(circle,rgba(42,61,102,.4) 0%,transparent 70%);border-radius:50%;pointer-events:none}
+.hero .container{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;padding-top:100px;padding-bottom:60px}
+.hero-content{max-width:580px}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);padding:8px 18px;border-radius:40px;margin-bottom:32px;color:rgba(255,255,255,.7);font-size:.82rem;font-weight:500;letter-spacing:.04em;text-transform:uppercase}
+.hero-badge .dot{width:6px;height:6px;background:var(--cinnabar);border-radius:50%;animation:pulse-dot 2s infinite}
+@keyframes pulse-dot{0%,100%{opacity:1}50%{opacity:.4}}
+.hero h1{font-family:var(--font-display);font-size:3.6rem;font-weight:600;color:var(--white);line-height:1.12;margin-bottom:24px;letter-spacing:-.02em}
+.hero h1 .accent{color:var(--cinnabar)}
+.hero p{font-size:1.15rem;color:rgba(255,255,255,.65);line-height:1.7;margin-bottom:40px;max-width:480px}
+.hero-buttons{display:flex;gap:16px;flex-wrap:wrap}
+.btn-primary{display:inline-flex;align-items:center;gap:8px;background:var(--cinnabar);color:var(--white);padding:16px 32px;border-radius:8px;font-weight:600;font-size:.95rem;transition:all .3s;border:none;cursor:pointer;letter-spacing:.02em}
+.btn-primary:hover{background:var(--cinnabar-hover);transform:translateY(-2px);box-shadow:0 8px 30px rgba(217,68,39,.3)}
+.btn-secondary{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--white);padding:16px 32px;border-radius:8px;font-weight:500;font-size:.95rem;transition:all .3s;border:1px solid rgba(255,255,255,.2);cursor:pointer}
+.btn-secondary:hover{border-color:rgba(255,255,255,.5);background:rgba(255,255,255,.05)}
+.hero-visual{display:flex;justify-content:center;align-items:center}
+.hero-graphic{position:relative;width:100%;max-width:480px;aspect-ratio:1;display:flex;align-items:center;justify-content:center}
+.hero-ring{position:absolute;border-radius:50%;border:1px solid rgba(255,255,255,.06)}
+.hero-ring:nth-child(1){width:100%;height:100%;animation:rotate-slow 40s linear infinite}
+.hero-ring:nth-child(2){width:75%;height:75%;animation:rotate-slow 30s linear infinite reverse}
+.hero-ring:nth-child(3){width:50%;height:50%;animation:rotate-slow 20s linear infinite}
+@keyframes rotate-slow{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.hero-ring .ring-dot{position:absolute;width:8px;height:8px;background:var(--cinnabar);border-radius:50%;top:0;left:50%;transform:translateX(-50%)}
+.hero-center-logo{width:120px;height:120px;object-fit:contain;position:relative;z-index:2;filter:drop-shadow(0 0 40px rgba(217,68,39,.2))}
+.hero-stats{display:flex;gap:40px;margin-top:48px;padding-top:32px;border-top:1px solid rgba(255,255,255,.08)}
+.hero-stat{text-align:left}
+.hero-stat .number{font-family:var(--font-display);font-size:2rem;font-weight:700;color:var(--white)}
+.hero-stat .number span{color:var(--cinnabar)}
+.hero-stat .label{font-size:.82rem;color:rgba(255,255,255,.45);margin-top:4px;letter-spacing:.04em;text-transform:uppercase}
+
+/* ── TRUST BAR ── */
+.trust-bar{background:var(--off-white);padding:40px 0;border-bottom:1px solid var(--gray-100)}
+.trust-bar .container{display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:8px;color:var(--gray-400);font-size:.85rem;font-weight:500}
+.trust-item svg{width:18px;height:18px;color:var(--cinnabar);flex-shrink:0}
+
+/* ── SECTIONS COMMON ── */
+.section{padding:100px 0}
+.section-label{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--cinnabar);margin-bottom:16px}
+.section-label::before{content:'';width:20px;height:2px;background:var(--cinnabar)}
+.section-title{font-family:var(--font-display);font-size:2.8rem;font-weight:600;line-height:1.15;color:var(--navy);letter-spacing:-.02em;margin-bottom:20px}
+.section-subtitle{font-size:1.1rem;color:var(--gray-600);line-height:1.7;max-width:560px}
+
+/* ── SERVICES ── */
+.services{background:var(--white)}
+.services-header{text-align:center;margin-bottom:64px}
+.services-header .section-subtitle{margin:0 auto}
+.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.service-card{background:var(--off-white);border:1px solid var(--gray-100);border-radius:16px;padding:40px 28px;transition:all .4s ease;position:relative;overflow:hidden}
+.service-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:3px;background:var(--cinnabar);transform:scaleX(0);transform-origin:left;transition:transform .4s ease}
+.service-card:hover{transform:translateY(-6px);box-shadow:0 20px 60px rgba(27,42,74,.08);border-color:transparent}
+.service-card:hover::before{transform:scaleX(1)}
+.service-icon{width:56px;height:56px;background:linear-gradient(135deg,var(--navy),var(--navy-light));border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:24px}
+.service-icon svg{width:26px;height:26px;color:var(--white)}
+.service-card h3{font-family:var(--font-display);font-size:1.3rem;font-weight:600;color:var(--navy);margin-bottom:12px}
+.service-card p{font-size:.92rem;color:var(--gray-600);line-height:1.65}
+.service-card .service-link{display:inline-flex;align-items:center;gap:6px;color:var(--cinnabar);font-weight:600;font-size:.85rem;margin-top:20px;transition:gap .3s}
+.service-card:hover .service-link{gap:10px}
+
+/* ── PROCESS ── */
+.process{background:var(--navy-deep);color:var(--white);position:relative;overflow:hidden}
+.process::before{content:'';position:absolute;top:0;right:0;width:40%;height:100%;background:linear-gradient(270deg,rgba(42,61,102,.3),transparent);pointer-events:none}
+.process-header{margin-bottom:64px}
+.process .section-title{color:var(--white)}
+.process .section-subtitle{color:rgba(255,255,255,.5)}
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;position:relative}
+.process-steps::before{content:'';position:absolute;top:28px;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.1),transparent)}
+.process-step{text-align:center;position:relative}
+.step-number{width:56px;height:56px;border-radius:50%;background:rgba(217,68,39,.1);border:2px solid var(--cinnabar);display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:700;font-size:1.1rem;color:var(--cinnabar);margin:0 auto 24px}
+.process-step h4{font-size:1.05rem;font-weight:600;margin-bottom:10px;color:var(--white)}
+.process-step p{font-size:.88rem;color:rgba(255,255,255,.45);line-height:1.6}
+
+/* ── WHY US ── */
+.why-us{background:var(--off-white)}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;margin-top:48px}
+.why-visual{position:relative}
+.why-card-stack{display:flex;flex-direction:column;gap:16px}
+.why-feature{display:flex;gap:20px;align-items:flex-start;background:var(--white);border:1px solid var(--gray-100);border-radius:14px;padding:28px;transition:all .3s}
+.why-feature:hover{border-color:var(--cinnabar);box-shadow:0 8px 30px rgba(27,42,74,.06)}
+.why-feature .feat-icon{width:44px;height:44px;min-width:44px;background:linear-gradient(135deg,var(--cinnabar),#E8603E);border-radius:12px;display:flex;align-items:center;justify-content:center}
+.why-feature .feat-icon svg{width:20px;height:20px;color:var(--white)}
+.why-feature h4{font-size:1.05rem;font-weight:600;color:var(--navy);margin-bottom:6px}
+.why-feature p{font-size:.88rem;color:var(--gray-600);line-height:1.6}
+
+/* ── CTA SECTION ── */
+.cta-section{background:linear-gradient(135deg,var(--navy-deep),var(--navy));padding:100px 0;text-align:center;position:relative;overflow:hidden}
+.cta-section::before{content:'';position:absolute;width:400px;height:400px;background:radial-gradient(circle,rgba(217,68,39,.15),transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);border-radius:50%}
+.cta-content{position:relative;z-index:2;max-width:640px;margin:0 auto}
+.cta-section .section-title{color:var(--white);font-size:2.6rem;margin-bottom:16px}
+.cta-section p{color:rgba(255,255,255,.55);font-size:1.1rem;line-height:1.7;margin-bottom:40px}
+.cta-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+/* ── FOOTER ── */
+footer{background:var(--navy-deep);padding:60px 0 30px;border-top:1px solid rgba(255,255,255,.06)}
+.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px}
+.footer-brand p{color:rgba(255,255,255,.4);font-size:.88rem;line-height:1.65;margin-top:16px;max-width:280px}
+.footer-col h5{font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:20px}
+.footer-col a{display:block;color:rgba(255,255,255,.55);font-size:.9rem;margin-bottom:12px;transition:color .3s}
+.footer-col a:hover{color:var(--white)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:28px;display:flex;justify-content:space-between;align-items:center;color:rgba(255,255,255,.3);font-size:.82rem}
+
+/* ── SCROLL ANIMATIONS ── */
+.reveal{opacity:0;transform:translateY(30px);transition:all .7s cubic-bezier(.23,1,.32,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:.1s}
+.reveal-delay-2{transition-delay:.2s}
+.reveal-delay-3{transition-delay:.3s}
+.reveal-delay-4{transition-delay:.4s}
+
+/* ── PORTFOLIO ── */
+.portfolio{background:var(--off-white)}
+.portfolio-header{text-align:center;margin-bottom:64px}
+.portfolio-header .section-subtitle{margin:0 auto}
+.portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.portfolio-card{background:var(--white);border-radius:16px;overflow:hidden;border:1px solid var(--gray-100);transition:all .4s ease;position:relative}
+.portfolio-card:hover{transform:translateY(-6px);box-shadow:0 20px 60px rgba(27,42,74,.1);border-color:transparent}
+.portfolio-img{width:100%;height:220px;background:linear-gradient(135deg,var(--navy),var(--navy-light));display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.portfolio-img svg{width:48px;height:48px;color:rgba(255,255,255,.3)}
+.portfolio-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(27,42,74,.9),rgba(42,61,102,.85));display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .4s ease}
+.portfolio-card:hover .portfolio-overlay{opacity:1}
+.portfolio-overlay span{color:var(--white);font-weight:600;font-size:.9rem;display:inline-flex;align-items:center;gap:8px;background:var(--cinnabar);padding:10px 24px;border-radius:6px}
+.portfolio-body{padding:28px}
+.portfolio-tag{display:inline-block;font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--cinnabar);background:rgba(217,68,39,.08);padding:4px 12px;border-radius:20px;margin-bottom:12px}
+.portfolio-card h3{font-family:var(--font-display);font-size:1.2rem;font-weight:600;color:var(--navy);margin-bottom:8px}
+.portfolio-card .portfolio-body p{font-size:.88rem;color:var(--gray-600);line-height:1.6;margin-bottom:16px}
+.portfolio-results{display:flex;gap:24px}
+.portfolio-result{text-align:left}
+.portfolio-result .result-value{font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:var(--navy)}
+.portfolio-result .result-value span{color:var(--cinnabar)}
+.portfolio-result .result-label{font-size:.72rem;color:var(--gray-400);text-transform:uppercase;letter-spacing:.06em;margin-top:2px}
+
+/* ── TESTIMONIALS ── */
+.testimonials{background:var(--white)}
+.testimonials-header{text-align:center;margin-bottom:64px}
+.testimonials-header .section-subtitle{margin:0 auto}
+.testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.testimonial-card{background:var(--off-white);border:1px solid var(--gray-100);border-radius:16px;padding:36px 28px;transition:all .4s ease;position:relative}
+.testimonial-card:hover{border-color:var(--cinnabar);box-shadow:0 12px 40px rgba(27,42,74,.06)}
+.testimonial-stars{display:flex;gap:3px;margin-bottom:20px}
+.testimonial-stars svg{width:16px;height:16px;fill:var(--cinnabar);color:var(--cinnabar)}
+.testimonial-card blockquote{font-size:.95rem;color:var(--gray-600);line-height:1.7;font-style:italic;margin-bottom:24px;position:relative}
+.testimonial-card blockquote::before{content:'\201C';font-family:var(--font-display);font-size:3rem;color:var(--cinnabar);opacity:.2;position:absolute;top:-20px;left:-4px;line-height:1}
+.testimonial-author{display:flex;align-items:center;gap:14px;padding-top:20px;border-top:1px solid var(--gray-100)}
+.testimonial-avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--navy-light));display:flex;align-items:center;justify-content:center;color:var(--white);font-weight:700;font-size:.9rem;flex-shrink:0}
+.testimonial-info h5{font-size:.92rem;font-weight:600;color:var(--navy)}
+.testimonial-info span{font-size:.78rem;color:var(--gray-400)}
+
+/* ── CONTACT FORM ── */
+.contact-section{background:linear-gradient(135deg,var(--navy-deep),var(--navy));padding:100px 0;position:relative;overflow:hidden}
+.contact-section::before{content:'';position:absolute;width:500px;height:500px;background:radial-gradient(circle,rgba(217,68,39,.1),transparent 70%);top:50%;right:-10%;transform:translateY(-50%);border-radius:50%;pointer-events:none}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;position:relative;z-index:2}
+.contact-info{color:var(--white)}
+.contact-info .section-title{color:var(--white);margin-bottom:16px}
+.contact-info > p{color:rgba(255,255,255,.55);font-size:1.05rem;line-height:1.7;margin-bottom:40px}
+.contact-details{display:flex;flex-direction:column;gap:24px}
+.contact-detail{display:flex;align-items:center;gap:16px}
+.contact-detail-icon{width:48px;height:48px;min-width:48px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center}
+.contact-detail-icon svg{width:20px;height:20px;color:var(--cinnabar)}
+.contact-detail-text h5{font-size:.92rem;font-weight:600;color:var(--white);margin-bottom:2px}
+.contact-detail-text span{font-size:.88rem;color:rgba(255,255,255,.45)}
+.contact-form{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:40px}
+.contact-form h3{font-family:var(--font-display);font-size:1.5rem;font-weight:600;color:var(--white);margin-bottom:8px}
+.contact-form > p{font-size:.88rem;color:rgba(255,255,255,.4);margin-bottom:32px}
+.form-group{margin-bottom:20px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-group label{display:block;font-size:.82rem;font-weight:600;color:rgba(255,255,255,.6);margin-bottom:8px;letter-spacing:.04em;text-transform:uppercase}
+.form-group input,.form-group select,.form-group textarea{width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:10px;padding:14px 16px;color:var(--white);font-family:var(--font-body);font-size:.9rem;transition:all .3s;outline:none}
+.form-group input::placeholder,.form-group textarea::placeholder{color:rgba(255,255,255,.25)}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--cinnabar);background:rgba(255,255,255,.08);box-shadow:0 0 0 3px rgba(217,68,39,.1)}
+.form-group select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.4)' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;cursor:pointer}
+.form-group select option{background:var(--navy-deep);color:var(--white)}
+.form-group textarea{resize:vertical;min-height:120px}
+.form-submit{width:100%;margin-top:8px}
+.form-note{text-align:center;font-size:.78rem;color:rgba(255,255,255,.3);margin-top:16px}
+.form-success{display:none;text-align:center;padding:40px 20px}
+.form-success svg{width:56px;height:56px;color:var(--cinnabar);margin-bottom:16px}
+.form-success h4{font-family:var(--font-display);font-size:1.4rem;color:var(--white);margin-bottom:8px}
+.form-success p{color:rgba(255,255,255,.5);font-size:.92rem}
+.form-error{display:none;color:var(--cinnabar);font-size:.82rem;margin-top:6px;font-weight:500}
+
+/* ── MOBILE MENU ── */
+.mobile-menu{display:none;position:fixed;top:0;left:0;width:100%;height:100vh;background:rgba(15,27,51,.98);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:32px;opacity:0;pointer-events:none;transition:opacity .3s}
+.mobile-menu.active{display:flex;opacity:1;pointer-events:all}
+.mobile-menu a{color:var(--white);font-size:1.2rem;font-weight:500}
+.mobile-close{position:absolute;top:24px;right:24px;background:none;border:none;color:var(--white);font-size:1.8rem;cursor:pointer}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1024px){
+  .hero .container{grid-template-columns:1fr;text-align:center}
+  .hero-content{max-width:100%}
+  .hero p{margin:0 auto 40px}
+  .hero-buttons{justify-content:center}
+  .hero-visual{display:none}
+  .hero-stats{justify-content:center}
+  .services-grid{grid-template-columns:repeat(2,1fr)}
+  .portfolio-grid{grid-template-columns:repeat(2,1fr)}
+  .process-steps{grid-template-columns:repeat(2,1fr);gap:40px}
+  .process-steps::before{display:none}
+  .why-grid{grid-template-columns:1fr;gap:40px}
+  .testimonials-grid{grid-template-columns:1fr 1fr}
+  .contact-grid{grid-template-columns:1fr;gap:48px}
+  .footer-top{grid-template-columns:1fr 1fr;gap:32px}
+  .section-title{font-size:2.2rem}
+  .hero h1{font-size:2.8rem}
+}
+@media(max-width:768px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .services-grid{grid-template-columns:1fr}
+  .portfolio-grid{grid-template-columns:1fr}
+  .process-steps{grid-template-columns:1fr}
+  .testimonials-grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .hero h1{font-size:2.2rem}
+  .hero-stats{flex-direction:column;gap:20px;align-items:center}
+  .footer-top{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;gap:12px;text-align:center}
+  .section{padding:72px 0}
+  .cta-section .section-title{font-size:2rem}
+  .contact-form{padding:28px}
+}
+
+/* ── FORM ANIMATIONS ── */
+.form-submit .spinner{display:inline-block;width:16px;height:16px;border:2px solid rgba(255,255,255,.3);border-top-color:var(--white);border-radius:50%;animation:spin .6s linear infinite;margin-left:8px}
+@keyframes spin{to{transform:rotate(360deg)}}
+.form-submit.sending{pointer-events:none;opacity:.85}
+.form-success{display:none;text-align:center;padding:40px 20px;animation:fadeInUp .6s ease}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.form-success .success-circle{width:72px;height:72px;border-radius:50%;background:rgba(217,68,39,.1);border:2px solid var(--cinnabar);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;animation:scaleIn .4s ease .1s both}
+.form-success .success-circle svg{width:32px;height:32px;color:var(--cinnabar);stroke-dasharray:30;stroke-dashoffset:30;animation:drawCheck .4s ease .4s forwards}
+@keyframes scaleIn{from{transform:scale(0)}to{transform:scale(1)}}
+@keyframes drawCheck{to{stroke-dashoffset:0}}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav id="navbar">
+  <div class="container">
+    <a href="#" class="nav-logo">
+      <img src="digitran/icon-digitran-Photoroom.png" alt="Digi'Tran">
+      <span>Digi'Tran</span>
+    </a>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#process">Processus</a>
+      <a href="#why">Pourquoi nous</a>
+      <a href="#contact" class="nav-cta">Demander un devis</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="toggleMenu()">&times;</button>
+  <a href="#services" onclick="toggleMenu()">Services</a>
+  <a href="#process" onclick="toggleMenu()">Processus</a>
+  <a href="#why" onclick="toggleMenu()">Pourquoi nous</a>
+  <a href="#contact" onclick="toggleMenu()" class="btn-primary">Demander un devis</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge"><span class="dot"></span> Agence digitale suisse</div>
+      <h1>Transformez votre vision en <span class="accent">solutions digitales</span> performantes</h1>
+      <p>Nous concevons des sites web premium, des applications sur mesure et des systèmes d'automatisation qui propulsent la croissance de votre entreprise.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn-primary">
+          Discutons de votre projet
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#services" class="btn-secondary">Découvrir nos services</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="number" data-target="14" data-suffix="">0</div>
+          <div class="label">Projets finalisés</div>
+        </div>
+        <div class="hero-stat">
+          <div class="number" data-target="100" data-suffix="%">0<span>%</span></div>
+          <div class="label">Clients satisfaits</div>
+        </div>
+        <div class="hero-stat">
+          <div class="number">Swiss<span>.</span></div>
+          <div class="label">Made quality</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-graphic">
+        <div class="hero-ring"><div class="ring-dot"></div></div>
+        <div class="hero-ring"><div class="ring-dot"></div></div>
+        <div class="hero-ring"><div class="ring-dot"></div></div>
+        <img src="digitran/icon-digitran-Photoroom.png" alt="Digi'Tran" class="hero-center-logo">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="container">
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      Qualité suisse
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      Délais respectés
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+      Accompagnement dédié
+    </div>
+    <div class="trust-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
+      Solutions sur mesure
+    </div>
+  </div>
+</div>
+
+<!-- SERVICES -->
+<section class="section services" id="services">
+  <div class="container">
+    <div class="services-header reveal">
+      <div class="section-label">Ce que nous faisons</div>
+      <h2 class="section-title">Des solutions digitales<br>qui génèrent des résultats</h2>
+      <p class="section-subtitle">Chaque projet est conçu pour maximiser votre impact business, avec une exécution de qualité premium.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <h3>Sites web premium</h3>
+        <p>Des sites vitrines élégants et performants qui reflètent le prestige de votre marque et convertissent vos visiteurs en clients.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3>Applications web</h3>
+        <p>Des applications métier sur mesure qui digitalisent vos processus et augmentent la productivité de vos équipes.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-3">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+        </div>
+        <h3>Automatisation SaaS</h3>
+        <p>Automatisez vos workflows répétitifs et libérez du temps pour ce qui compte vraiment: la croissance de votre business.</p>
+      </div>
+      <div class="service-card reveal reveal-delay-4">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+        </div>
+        <h3>Applications mobiles</h3>
+        <p>Des apps mobiles natives et performantes qui offrent une expérience utilisateur exceptionnelle à vos clients.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section process" id="process">
+
+  <div class="container">
+    <div class="process-header reveal">
+      <div class="section-label">Notre approche</div>
+      <h2 class="section-title">Un processus structuré<br>pour des résultats garantis</h2>
+      <p class="section-subtitle">De la première idée à la mise en ligne, nous vous accompagnons avec rigueur et transparence.</p>
+    </div>
+    <div class="process-steps">
+      <div class="process-step reveal reveal-delay-1">
+        <div class="step-number">01</div>
+        <h4>Découverte</h4>
+        <p>Nous analysons vos besoins, vos objectifs et votre marché pour définir la stratégie idéale.</p>
+      </div>
+      <div class="process-step reveal reveal-delay-2">
+        <div class="step-number">02</div>
+        <h4>Conception</h4>
+        <p>Design UI/UX premium et architecture technique pensée pour la performance et la conversion.</p>
+      </div>
+      <div class="process-step reveal reveal-delay-3">
+        <div class="step-number">03</div>
+        <h4>Développement</h4>
+        <p>Code propre, technologies modernes et itérations régulières avec votre validation continue.</p>
+      </div>
+      <div class="process-step reveal reveal-delay-4">
+        <div class="step-number">04</div>
+        <h4>Lancement & Suivi</h4>
+        <p>Mise en production, optimisation et support dédié pour garantir votre succès digital.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="section why-us" id="why">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Pourquoi Digi'Tran</div>
+      <h2 class="section-title">Le partenaire digital<br>qu'il vous faut</h2>
+      <p class="section-subtitle">Nous combinons expertise technique, sens du design et compréhension business pour livrer des projets qui dépassent vos attentes.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card-stack">
+        <div class="why-feature reveal reveal-delay-1">
+          <div class="feat-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div>
+            <h4>Qualité premium</h4>
+            <p>Chaque pixel compte. Nous livrons un niveau de finition qui reflète l'excellence attendue par le marché suisse.</p>
+          </div>
+        </div>
+        <div class="why-feature reveal reveal-delay-2">
+          <div class="feat-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <h4>Fiabilité & transparence</h4>
+            <p>Communication claire, devis détaillés, délais tenus. Vous savez toujours où en est votre projet.</p>
+          </div>
+        </div>
+        <div class="why-feature reveal reveal-delay-3">
+          <div class="feat-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <div>
+            <h4>Performance orientée résultats</h4>
+            <p>Nos solutions ne sont pas juste belles — elles convertissent, engagent et génèrent un vrai retour sur investissement.</p>
+          </div>
+        </div>
+      </div>
+      <div class="why-visual reveal reveal-delay-2">
+        <div class="why-card-stack">
+          <div class="why-feature">
+            <div class="feat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+            </div>
+            <div>
+              <h4>Expertise locale, vision globale</h4>
+              <p>Basés en Suisse, nous comprenons les exigences du marché local tout en utilisant les meilleures pratiques internationales.</p>
+            </div>
+          </div>
+          <div class="why-feature">
+            <div class="feat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><path d="M3.27 6.96L12 12.01l8.73-5.05M12 22.08V12"/></svg>
+            </div>
+            <div>
+              <h4>Technologies modernes</h4>
+              <p>React, Next.js, Node.js, Flutter — nous utilisons les frameworks les plus performants pour des solutions pérennes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="contact-section" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="section-label">Prêt à démarrer ?</div>
+        <h2 class="section-title">Lancez votre projet<br>digital dès aujourd'hui</h2>
+        <p>Discutons de vos objectifs et découvrez comment Digi'Tran peut transformer votre présence digitale. Premier appel découverte offert.</p>
+        <div class="contact-details">
+          <div class="contact-detail">
+            <div class="contact-detail-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+            </div>
+            <div class="contact-detail-text">
+              <h5>Email</h5>
+              <span>theo.tranvan@icloud.com</span>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="contact-detail-text">
+              <h5>Adresse</h5>
+              <span>Nyon, Suisse</span>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <div class="contact-detail-text">
+              <h5>Disponibilité</h5>
+              <span>Tous les jours, 8h — 22h</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form reveal reveal-delay-2" id="contactForm">
+        <h3>Demander un devis gratuit</h3>
+        <p>Remplissez le formulaire et nous vous répondons sous 24h.</p>
+        <form id="devisForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nom">Nom complet</label>
+              <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+              <div class="form-error" id="nomError">Veuillez entrer votre nom.</div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="votre@email.ch" required>
+              <div class="form-error" id="emailError">Veuillez entrer un email valide.</div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="entreprise">Entreprise</label>
+              <input type="text" id="entreprise" name="entreprise" placeholder="Nom de votre entreprise">
+            </div>
+            <div class="form-group">
+              <label for="service">Service souhaité</label>
+              <select id="service" name="service" required>
+                <option value="" disabled selected>Choisir un service</option>
+                <option value="site-web">Site web premium</option>
+                <option value="app-web">Application web</option>
+                <option value="saas">Automatisation SaaS</option>
+                <option value="mobile">Application mobile</option>
+                <option value="autre">Autre</option>
+              </select>
+              <div class="form-error" id="serviceError">Veuillez sélectionner un service.</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">Décrivez votre projet</label>
+            <textarea id="message" name="message" placeholder="Parlez-nous de votre projet, vos objectifs, vos délais..." required></textarea>
+            <div class="form-error" id="messageError">Veuillez décrire votre projet.</div>
+          </div>
+          <button type="submit" class="btn-primary form-submit">
+            Envoyer ma demande
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+          <p class="form-note">Nous respectons votre vie privée. Aucune donnée n'est partagée.</p>
+        </form>
+        <div class="form-success" id="formSuccess">
+          <div class="success-circle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+          </div>
+          <h4>Demande envoyée !</h4>
+          <p>Merci pour votre intérêt. Nous vous répondrons dans les 24 heures.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#" class="nav-logo">
+          <img src="digitran/icon-digitran-Photoroom.png" alt="Digi'Tran" style="height:32px">
+          <span>Digi'Tran</span>
+        </a>
+        <p>Votre partenaire digital en Suisse. Nous transformons vos ambitions en solutions numériques performantes.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Services</h5>
+        <a href="#services">Sites web premium</a>
+        <a href="#services">Applications web</a>
+        <a href="#services">Automatisation SaaS</a>
+        <a href="#services">Applications mobiles</a>
+      </div>
+      <div class="footer-col">
+        <h5>Entreprise</h5>
+        <a href="#why">À propos</a>
+        <a href="#process">Notre processus</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <a href="mailto:theo.tranvan@icloud.com">theo.tranvan@icloud.com</a>
+        <a href="tel:+41765460028">+41 76 546 00 28</a>
+        <a href="#">Nyon, Suisse</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Digi'Tran. Tous droits réservés.</span>
+      <span>Conçu avec précision en Suisse</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Nav scroll effect
+const nav = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 40);
+});
+
+// Mobile menu
+function toggleMenu() {
+  document.getElementById('mobileMenu').classList.toggle('active');
+}
+
+// Scroll reveal
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
+// Animated stat counters
+function animateCounter(el, target, suffix, duration) {
+  let start = 0;
+  const startTime = performance.now();
+  function update(now) {
+    const elapsed = now - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const current = Math.round(eased * target);
+    el.innerHTML = current + '<span>' + suffix + '</span>';
+    if (progress < 1) requestAnimationFrame(update);
+  }
+  requestAnimationFrame(update);
+}
+
+const statsObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && !entry.target.dataset.animated) {
+      entry.target.dataset.animated = 'true';
+      const counters = entry.target.querySelectorAll('.hero-stat .number[data-target]');
+      counters.forEach(counter => {
+        const target = parseInt(counter.dataset.target, 10);
+        const suffix = counter.dataset.suffix || '';
+        animateCounter(counter, target, suffix, 2000);
+      });
+    }
+  });
+}, { threshold: 0.5 });
+
+const statsEl = document.querySelector('.hero-stats');
+if (statsEl) statsObserver.observe(statsEl);
+
+// Contact form validation & submission
+const devisForm = document.getElementById('devisForm');
+if (devisForm) {
+  devisForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    let valid = true;
+
+    // Reset errors
+    devisForm.querySelectorAll('.form-error').forEach(err => err.style.display = 'none');
+
+    // Validate name
+    const nom = document.getElementById('nom');
+    if (!nom.value.trim()) {
+      document.getElementById('nomError').style.display = 'block';
+      valid = false;
+    }
+
+    // Validate email
+    const email = document.getElementById('email');
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email.value.trim())) {
+      document.getElementById('emailError').style.display = 'block';
+      valid = false;
+    }
+
+    // Validate service
+    const service = document.getElementById('service');
+    if (!service.value) {
+      document.getElementById('serviceError').style.display = 'block';
+      valid = false;
+    }
+
+    // Validate message
+    const message = document.getElementById('message');
+    if (!message.value.trim()) {
+      document.getElementById('messageError').style.display = 'block';
+      valid = false;
+    }
+
+    if (valid) {
+      // ── EMAILJS : remplace ces 3 valeurs par les tiennes ──
+      const EMAILJS_PUBLIC_KEY = 's9sIeZ8LKsGnksHwa';      // Account > API Keys
+      const EMAILJS_SERVICE_ID = 'service_nof2qm9';      // Email Services > Service ID
+      const EMAILJS_TEMPLATE_ID = 'template_b9tg9xe';    // Email Templates > Template ID
+
+      const submitBtn = devisForm.querySelector('.form-submit');
+      submitBtn.disabled = true;
+      submitBtn.classList.add('sending');
+      submitBtn.innerHTML = 'Envoi en cours<span class="spinner"></span>';
+
+      emailjs.init(EMAILJS_PUBLIC_KEY);
+      emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+        nom: nom.value.trim(),
+        email: email.value.trim(),
+        entreprise: document.getElementById('entreprise').value.trim(),
+        service: service.value,
+        message: message.value.trim()
+      }).then(function() {
+        devisForm.style.display = 'none';
+        document.getElementById('formSuccess').style.display = 'block';
+      }, function(error) {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = 'Envoyer ma demande <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
+        alert('Erreur lors de l\'envoi. Veuillez réessayer ou nous contacter directement par email.');
+      });
+    }
+  });
+}
+</script>
+</body>
+</html>
